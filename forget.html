@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telkomsel - Lupa Kata Sandi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sisi Kiri -->
+        <div class="left-side">
+            <div class="logo-container">
+                <img src="Telkomsel_2021_icon.svg" alt="Telkomsel Logo" class="logo">
+                <div class="logo-text">
+                    <strong>Telkomsel</strong><br>
+                    <span>by Telkom Indonesia</span>
+                </div>
+            </div>
+            <div class="welcome-text">
+                <h1>Reset Kata Sandi <br> Anda</h1>
+                <p>Masukkan email Anda untuk menerima instruksi reset kata sandi</p>
+            </div>
+        </div>
+
+        <!-- Sisi Kanan -->
+        <div class="right-side">
+            <!-- Form Forget Password - Tahap 1: Input Email -->
+            <div class="form-card" id="forgetBox">
+                <h2>Lupa Kata Sandi</h2>
+                <form id="forgetForm">
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Masukkan email akun Anda untuk menerima instruksi reset kata sandi.</p>
+                    <input type="email" id="forgetEmail" placeholder="Email" required>
+                    <button type="submit" class="btn-primary btn-forget">Kirim Instruksi</button>
+                </form>
+                <div id="forgetMessage" class="message"></div>
+                <p class="footer-text"><a href="login.html">Kembali ke Login</a></p>
+            </div>
+
+            <!-- Form Forget Password - Tahap 2: Input Kode Verifikasi -->
+            <div class="form-card hidden" id="verifyBox">
+                <h2>Verifikasi Kode</h2>
+                <form id="verifyForm">
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Kami telah mengirim kode verifikasi ke email Anda. Masukkan kode tersebut di bawah ini.</p>
+                    <input type="text" id="verifyCode" placeholder="Kode Verifikasi (6 digit)" maxlength="6" required>
+                    <button type="submit" class="btn-primary btn-verify">Verifikasi</button>
+                </form>
+                <div id="verifyMessage" class="message"></div>
+                <p class="footer-text"><a href="#" onclick="backToForget(); return false;">Kembali</a></p>
+            </div>
+
+            <!-- Form Forget Password - Tahap 3: Reset Kata Sandi -->
+            <div class="form-card hidden" id="resetBox">
+                <h2>Reset Kata Sandi</h2>
+                <form id="resetForm">
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Buat kata sandi baru yang kuat untuk keamanan akun Anda.</p>
+                    
+                    <div class="password-field">
+                        <label for="newPassword">Kata Sandi Baru</label>
+                        <div style="position: relative;">
+                            <input type="password" id="newPassword" placeholder="Kata Sandi Baru" class="pass-input" required>
+                            <i class="fa-regular fa-eye toggle-eye"></i>
+                        </div>
+                    </div>
+
+                    <div class="password-field">
+                        <label for="confirmPassword">Konfirmasi Kata Sandi</label>
+                        <div style="position: relative;">
+                            <input type="password" id="confirmPassword" placeholder="Konfirmasi Kata Sandi" class="pass-input" required>
+                            <i class="fa-regular fa-eye toggle-eye"></i>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-reset">Reset Kata Sandi</button>
+                </form>
+                <div id="resetMessage" class="message"></div>
+                <p class="footer-text"><a href="login.html">Kembali ke Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

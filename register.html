@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telkomsel - Daftar Akun</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sisi Kiri -->
+        <div class="left-side">
+            <div class="logo-container">
+                <img src="Telkomsel_2021_icon.svg" alt="Telkomsel Logo" class="logo">
+                <div class="logo-text">
+                    <strong>Telkomsel</strong><br>
+                    <span>by Telkom Indonesia</span></div>
+            </div>
+            <div class="welcome-text">
+                <h1>Bergabunglah dengan <br> Telkomsel</h1>
+                <p>Buat Akun Baru & Nikmati Berbagai Keuntungan</p>
+            </div>
+        </div>
+
+        <!-- Sisi Kanan -->
+        <div class="right-side">
+            <!-- Form Register -->
+            <div class="form-card" id="registerBox">
+                <h2>Daftar Akun Baru</h2>
+                <form id="registerForm">
+                    <!-- Input Nama Lengkap -->
+                    <div>
+                        <label for="fullName">Nama Lengkap</label>
+                        <input type="text" id="fullName" placeholder="Nama Lengkap Anda" required>
+                    </div>
+
+                    <!-- Input Email -->
+                    <div>
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" placeholder="Email Anda" required>
+                    </div>
+
+                    <!-- Input Nomor Telepon -->
+                    <div>
+                        <label for="phoneNumber">Nomor Telepon</label>
+                        <input type="tel" id="phoneNumber" placeholder="08xx-xxxx-xxxx" pattern="[0-9\-]{10,}" required>
+                    </div>
+
+                    <!-- Input Password -->
+                    <div class="password-field">
+                        <label for="registerPassword">Kata Sandi</label>
+                        <div style="position: relative;">
+                            <input type="password" id="registerPassword" placeholder="Kata Sandi" class="pass-input" required>
+                            <i class="fa-regular fa-eye toggle-eye"></i>
+                        </div>
+                    </div>
+
+                    <!-- Input Konfirmasi Password -->
+                    <div class="password-field">
+                        <label for="confirmRegisterPassword">Konfirmasi Kata Sandi</label>
+                        <div style="position: relative;">
+                            <input type="password" id="confirmRegisterPassword" placeholder="Konfirmasi Kata Sandi" class="pass-input" required>
+                            <i class="fa-regular fa-eye toggle-eye"></i>
+                        </div>
+                    </div>
+
+                    <!-- Checkbox Kesepakatan -->
+                    <div class="remember-me" style="margin-top: 15px;">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">Saya setuju dengan <a href="#" onclick="return false;">Syarat & Ketentuan</a></label>
+                    </div>
+
+                    <!-- Tombol Register -->
+                    <button type="submit" class="btn-primary btn-reg">Daftar Akun</button>
+                </form>
+
+                <!-- Pesan Notifikasi -->
+                <div id="registerMessage" class="message"></div>
+
+                <!-- Link ke Login -->
+                <p class="footer-text">Sudah punya akun? <a href="login.html">Masuk Sekarang</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

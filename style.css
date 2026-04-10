@@ -1,0 +1,269 @@
+/* Pengaturan Dasar */
+* { box-sizing: border-box; 
+    margin: 0; padding: 0; 
+    font-family: 
+    'Segoe UI', 
+    sans-serif;     
+}
+
+body { 
+    background-color: #f0f4f8; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Kontainer Utama */
+.main-container { 
+    display: flex; 
+    width: 950px; 
+    background: white; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+
+/* Sisi Kiri */
+.left-side {
+    flex: 1.2;
+    background: linear-gradient(rgba(255, 255, 255, 0.358), rgba(0, 0, 0, 0.342)), 
+                url('ilustrasi tower.png') center/cover;
+    position: relative;
+    padding: 30px;
+}
+
+.logo-container {
+    background: rgba(13, 30, 51, 0.9);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;    
+    color: white;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 12px;}
+
+.logo-text strong { font-size: 18px; }
+.logo-text span { font-size: 12px; opacity: 0.8; }
+
+.brand { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    font-weight: bold; 
+    margin-bottom: 30px; 
+}
+
+.left-side h1 { 
+    color: #fcfcfc; 
+    margin-bottom: 10px; 
+}
+
+.left-side p { 
+    color: #dedcdc; 
+    font-size: 14px; 
+}
+
+/* Tambahkan pengaturan margin otomatis pada teks selamat datang */
+.welcome-text {
+    margin-top: 40px;      /* Mendorong teks ke bawah dari logo */
+    margin-bottom: 40px;   /* Mendorong teks ke atas dari batas bawah */
+    text-align: left;      /* Memastikan tulisan tetap rata kiri (tidak ketengah) */
+}
+
+/* Memastikan teks terlihat jelas (dari modifikasi sebelumnya) */
+.welcome-text p {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+/* Sisi Kanan */
+.right-side { 
+    flex: 1; 
+    padding: 40px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.form-card { 
+    width: 100%; 
+    max-width: 350px; 
+}
+
+.form-card h2 { 
+    text-align: center; 
+    margin-bottom: 25px; 
+    color: #333; 
+}
+
+/* Input & Button */
+input { 
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+}
+
+.password-field { 
+    position: relative; 
+}
+
+.toggle-eye { 
+    position: absolute; 
+    right: 12px; 
+    top: 15px; 
+    cursor: pointer; 
+    color: #999; 
+}
+
+.btn-primary { 
+    width: 100%; 
+    padding: 12px; 
+    border: none; 
+    border-radius: 8px; 
+    color: white; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background-color: #b30000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(179, 0, 0, 0.3);
+}
+
+.btn-reg { 
+    background-color: #b41f1f; 
+}   /* merah Gelap sesuai gambar register */
+
+.btn-forget {
+    background-color: #b41f1f;
+} /* Sama dengan login */
+
+.btn-verify {
+    background-color: #b41f1f;
+} /* Sama dengan login */
+
+.btn-reset {
+    background-color: #b41f1f;
+} /* Sama dengan login */
+
+/* Utilitas */
+.hidden { 
+    display: none !important; 
+}
+
+.form-options { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 12px; 
+    margin-bottom: 15px; 
+}
+
+.divider { 
+    text-align: center; 
+    margin: 20px 0; 
+    border-bottom: 1px solid #eee; 
+    line-height: 0.1em; 
+}
+
+.divider span { 
+    background: #fff; 
+    padding: 0 10px; 
+    font-size: 12px; 
+    color: #999; 
+}
+.social-login { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.social-btn { 
+    padding: 8px 15px; 
+    border: 1px solid #eee; 
+    border-radius: 5px; 
+    background: white; 
+    cursor: pointer; 
+}
+.footer-text { 
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 13px; 
+}
+.footer-text a { 
+    color: #0d2137; 
+    font-weight: bold; 
+    text-decoration: none; 
+}
+
+/* Styling untuk pesan */
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+/* Styling untuk label */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.password-field label {
+    margin-bottom: 5px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.remember-me label {
+    margin: 0;
+    cursor: pointer;
+}   

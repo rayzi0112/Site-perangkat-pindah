@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telkomsel - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sisi Kiri -->
+        <div class="left-side">
+            <div class="logo-container">
+                <img src="Telkomsel_2021_icon.svg" alt="Telkomsel Logo" class="logo">
+                <div class="logo-text">
+                    <strong>Telkomsel</strong><br>
+                    <span>by Telkom Indonesia</span>
+                </div>
+            </div>
+            <div class="welcome-text">
+                <h1>Selamat Datang di <br> Telkomsel</h1>
+                <p>Akses Akun Anda & Mulai Berkolaborasi</p>
+            </div>
+        </div>
+
+        <!-- Sisi Kanan -->
+        <div class="right-side">
+            <!-- Form Login --> 
+            <div class="form-card" id="loginBox">
+                <h2>Masuk ke Akun Anda</h2>
+                <form id="loginForm">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <div class="password-field">
+                        <input type="password" id="loginPassword" placeholder="Kata Sandi" class="pass-input" required>
+                        <i class="fa-regular fa-eye toggle-eye"></i>
+                    </div>
+                    <div class="form-options">
+                        <a href="forget.html" class="forgot-link">Lupa Kata Sandi?</a>
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember-log">
+                            <label for="remember-log">Ingat Saya</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary btn-login">Masuk</button>
+                </form>
+                <div id="loginMessage" class="message"></div>
+                <p class="footer-text">Belum punya akun? <a href="register.html">Daftar Sekarang</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
